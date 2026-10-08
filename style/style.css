@@ -1,0 +1,183 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #eef4f3;
+    color: #263238;
+    text-align: center;
+}
+
+/* CABEÇALHO */
+
+header {
+    background-color: #164e63;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+header h1 {
+    margin: 0 0 30px 0;
+    font-size: 52px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+nav a:hover {
+    color: #a7d8d1;
+}
+
+/* CONTEÚDO */
+
+main {
+    width: 100%;
+    text-align: center;
+    padding: 30px;
+}
+
+main h2 {
+    font-size: 48px;
+    margin: 0 0 35px 0;
+    text-align: center;
+    color: #164e63;
+}
+
+/* FILMES */
+
+.filme {
+    background-color: #ffffff;
+    width: 500px;
+    max-width: 90%;
+    margin: 25px auto;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px #c5d3d5;
+    text-align: center;
+}
+
+.filme p {
+    font-size: 22px;
+    margin: 10px;
+    text-align: center;
+}
+
+.filme a {
+    display: inline-block;
+    margin-top: 20px;
+    color: #087f8c;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.filme a:hover {
+    color: #164e63;
+    text-decoration: underline;
+}
+
+/* FORMULÁRIOS */
+
+form {
+    background-color: #ffffff;
+    width: 500px;
+    max-width: 90%;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px #c5d3d5;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #164e63;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #a9c5c9;
+    border-radius: 6px;
+    background-color: #f7fbfa;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #087f8c;
+}
+
+textarea {
+    height: 120px;
+}
+
+/* BOTÕES */
+
+button,
+input[type="submit"] {
+    margin-top: 20px;
+    background-color: #087f8c;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+button:hover,
+input[type="submit"]:hover {
+    background-color: #164e63;
+}
+
+/* COMENTÁRIOS */
+
+.comentario {
+    background-color: #ffffff;
+    width: 500px;
+    max-width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px #c5d3d5;
+}
+
+.comentario .usuario {
+    font-size: 20px;
+    font-weight: bold;
+    color: #087f8c;
+}
+
+.comentario .data {
+    font-size: 14px;
+    color: #78909c;
+}
+
+/* RODAPÉ */
+
+footer {
+    background-color: #164e63;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+}
