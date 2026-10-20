@@ -81,6 +81,41 @@ http://localhost:8000
 
 **Observação:** caso o projeto utilize um subdiretório ou necessite de alguma configuração específica, o endereço de acesso deverá ser ajustado.
 
+## 💾 Backup do banco de dados (Dump)
+
+O dump é utilizado para gerar uma cópia do banco de dados, armazenando as informações cadastradas no sistema. Esse arquivo pode ser utilizado para restaurar os dados em outro ambiente ou recuperar informações quando necessário.
+
+### Gerar o dump
+
+No terminal do servidor, utilizando o PostgreSQL, execute:
+
+```bash
+pg_dump -U postgres -d filmes -f filmes.sql
+```
+
+Nesse comando:
+
+- `-U filmes`: informa o usuário do PostgreSQL.
+- `-d filmes`: indica o banco de dados que será exportado.
+- `-f filmes.sql`: define o nome do arquivo que será gerado.
+
+Após executar o comando, informe a senha do banco de dados, caso seja solicitada. O arquivo `filmes.sql` será criado no diretório atual.
+
+### Restaurar o dump
+
+Para restaurar o backup em um banco de dados já criado, execute:
+
+```bash
+psql -U filmes -d filmes -f filmes.sql
+```
+
+**Observação:** o usuário e o nome do banco devem ser ajustados conforme a configuração do ambiente. O arquivo de dump deve ser guardado em um local seguro para evitar a perda dos dados do projeto.
+
+
+
+
+
+
 ## 📁 Estrutura do projeto
 
 ```text
