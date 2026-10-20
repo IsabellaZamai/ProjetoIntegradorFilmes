@@ -1,3 +1,5 @@
+
+/* CONFIGURAÇÃO GERAL */
 * {
     box-sizing: border-box;
 }
@@ -5,179 +7,207 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #eef4f3;
-    color: #263238;
+    background-color: #eeeaf5;
+    color: #292333;
     text-align: center;
 }
 
 /* CABEÇALHO */
-
 header {
-    background-color: #164e63;
+    background-color: #7024df;
     color: white;
     text-align: center;
-    padding: 35px 20px;
+    padding: 25px 15px;
 }
 
 header h1 {
-    margin: 0 0 30px 0;
-    font-size: 52px;
+    margin: 0 0 20px;
+    font-size: 36px;
 }
 
+/* MENU */
 nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
     flex-wrap: wrap;
+    gap: 12px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    font-size: 25px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    transition: 0.3s;
 }
 
 nav a:hover {
-    color: #a7d8d1;
+    background-color: #5316b5;
 }
 
-/* CONTEÚDO */
-
+/* CONTEÚDO PRINCIPAL */
 main {
-    width: 100%;
-    text-align: center;
-    padding: 30px;
-}
-
-main h2 {
-    font-size: 48px;
-    margin: 0 0 35px 0;
-    text-align: center;
-    color: #164e63;
-}
-
-/* FILMES */
-
-.filme {
-    background-color: #ffffff;
-    width: 500px;
-    max-width: 90%;
-    margin: 25px auto;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px #c5d3d5;
+    width: 90%;
+    max-width: 1000px;
+    margin: 35px auto;
     text-align: center;
 }
 
-.filme p {
-    font-size: 22px;
-    margin: 10px;
+/* TÍTULOS */
+h2 {
+    color: #7024df;
     text-align: center;
-}
-
-.filme a {
-    display: inline-block;
-    margin-top: 20px;
-    color: #087f8c;
-    font-size: 20px;
-    text-decoration: none;
-}
-
-.filme a:hover {
-    color: #164e63;
-    text-decoration: underline;
+    margin-bottom: 25px;
 }
 
 /* FORMULÁRIOS */
-
 form {
-    background-color: #ffffff;
-    width: 500px;
-    max-width: 90%;
-    margin: 30px auto;
-    padding: 30px;
+    background-color: white;
+    width: 90%;
+    max-width: 600px;
+    margin: 25px auto;
+    padding: 25px;
     border-radius: 12px;
-    box-shadow: 0 4px 12px #c5d3d5;
+    box-shadow: 0 3px 12px #00000012;
+    text-align: center;
 }
 
 label {
     display: block;
-    text-align: left;
     margin-top: 15px;
-    margin-bottom: 5px;
-    color: #164e63;
+    margin-bottom: 7px;
+    font-weight: bold;
+    text-align: center;
 }
 
 input,
 textarea,
 select {
+    display: block;
     width: 100%;
     padding: 12px;
-    border: 1px solid #a9c5c9;
-    border-radius: 6px;
-    background-color: #f7fbfa;
+    border: 1px solid #d5c9e8;
+    border-radius: 7px;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
 }
 
 input:focus,
 textarea:focus,
 select:focus {
-    outline: none;
-    border-color: #087f8c;
-}
-
-textarea {
-    height: 120px;
+    outline: 2px solid #b99aef;
+    border-color: #7024df;
 }
 
 /* BOTÕES */
-
 button,
 input[type="submit"] {
-    margin-top: 20px;
-    background-color: #087f8c;
+    display: block;
+    background-color: #7024df;
     color: white;
     border: none;
-    padding: 12px 25px;
-    border-radius: 6px;
-    font-size: 17px;
+    border-radius: 8px;
+    padding: 12px 20px;
+    margin: 18px auto;
     cursor: pointer;
+    font-size: 15px;
+    width: auto;
 }
 
 button:hover,
 input[type="submit"]:hover {
-    background-color: #164e63;
+    background-color: #5316b5;
 }
 
-/* COMENTÁRIOS */
+/* LINKS */
+a {
+    color: #7024df;
+}
 
-.comentario {
-    background-color: #ffffff;
-    width: 500px;
-    max-width: 90%;
-    margin: 20px auto;
+/* MANTER LINKS DO MENU BRANCOS */
+nav a {
+    color: white;
+}
+
+/* LISTA DE FILMES E COMENTÁRIOS */
+.filme,
+.comentario,
+.card {
+    background-color: white;
+    width: 90%;
+    max-width: 800px;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px #c5d3d5;
+    margin: 20px auto;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px #00000010;
+    text-align: center;
 }
 
-.comentario .usuario {
-    font-size: 20px;
-    font-weight: bold;
-    color: #087f8c;
+.filme h3,
+.card h3 {
+    color: #7024df;
+    text-align: center;
 }
 
-.comentario .data {
-    font-size: 14px;
-    color: #78909c;
+/* TABELAS */
+table {
+    width: 100%;
+    max-width: 900px;
+    border-collapse: collapse;
+    background-color: white;
+    margin: 20px auto;
+    text-align: center;
+}
+
+th {
+    background-color: #7024df;
+    color: white;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #e5deef;
 }
 
 /* RODAPÉ */
-
 footer {
-    background-color: #164e63;
+    background-color: #7024df;
     color: white;
     text-align: center;
-    padding: 20px;
-    font-size: 18px;
+    padding: 18px;
+    margin-top: 40px;
+}
+
+/* CELULAR */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 28px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main {
+        width: 94%;
+    }
+
+    form {
+        width: 100%;
+        padding: 18px;
+    }
+
+    table {
+        font-size: 13px;
+    }
 }

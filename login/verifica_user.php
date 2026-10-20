@@ -8,7 +8,7 @@ if (session_status() == PHP_SESSION_NONE) {
 
 if (!isset($_SESSION['id_usuario'])) {
 
-    header("Location: /login/login.php");
+    header("Location: /ProjetoIntegradorFilmes/login/login.php");
 
     exit;
 
