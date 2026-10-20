@@ -78,6 +78,7 @@ function atualizar_filme($conexao, $id, $nome, $descricao, $ano)
 
 // CADASTRAR USUÁRIO
 
+
 function cadastrar_user($conexao, $email, $senha)
 {
     $sql = "INSERT INTO usuarios(email, senha)
@@ -88,8 +89,12 @@ function cadastrar_user($conexao, $email, $senha)
     $stmt->bindParam(":email", $email);
     $stmt->bindParam(":senha", $senha);
 
-    $stmt->execute();
-
+    if ($stmt->execute()) {
+        header("Location: /SistemaFilme/login/login.php");
+        exit;
+    } else {
+        echo "Erro no Cadastro!";
+    }
 }
 
 

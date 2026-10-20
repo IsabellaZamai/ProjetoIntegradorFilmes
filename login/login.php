@@ -50,7 +50,8 @@ require_once __DIR__ . '/../includes/functions.php';
 
 <br>
 
-<a href="cadastro.php">Criar uma conta</a>
+<a href="cadastro.php">Criar uma conta</a><br>
+<a href="index.php">ir pro Inicio</a>
 
 <?php
 
