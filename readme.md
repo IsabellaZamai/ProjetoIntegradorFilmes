@@ -119,3 +119,6 @@ Acesse o projeto no GitHub:
 
 
 
+Create user filme whit password create database owner films;
+-U -d -f
+nano connect.php

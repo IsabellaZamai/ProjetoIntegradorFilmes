@@ -14,7 +14,7 @@ require_once __DIR__ . '/../login/verifica_user.php';
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="/../style/style.css">
+    <link rel="stylesheet" href="/ProjetoIntegrador/style/style.css">
 
     <title>Excluir Filme</title>
 
