@@ -1,122 +1,121 @@
-# READ ME - Site de filmes
-
-Projeto de Filmes:
- O Site de Filmes tem a função de receber os filmes e comentarios dos usuarios,
-
- Objetivo:
- O objetivo do Site de Filmes é dar a opção dos usuarios
-
- Funcionalidades:
-
-
-Tecnologias usadas:
-
-
-como rodar:
-
-
-
-
-# 🎬 Projeto Integrador de Filmes
+# 🎬 READ ME - Site de Filmes
 
 ## 📌 Sobre o projeto
 
-O **Projeto Integrador de Filmes** é um site desenvolvido com o objetivo de permitir o cadastro e a consulta de filmes, além de possibilitar que os usuários compartilhem suas opiniões por meio de comentários.
+O **Site de Filmes** é um projeto desenvolvido para permitir que os usuários cadastrem, consultem, atualizem e excluam filmes, além de compartilhar suas opiniões por meio de comentários.
 
-O projeto foi desenvolvido como parte de uma atividade acadêmica, com o intuito de aplicar conhecimentos de programação web, integração com banco de dados e desenvolvimento de interfaces.
+O site apresenta informações como nome, descrição e ano de lançamento dos filmes, permitindo que os usuários encontrem os filmes cadastrados e visualizem os comentários relacionados a cada um deles.
+
+## 🎯 Objetivo
+
+O objetivo do Site de Filmes é oferecer um espaço onde os usuários possam organizar filmes e compartilhar suas opiniões sobre eles. O projeto também busca colocar em prática os conhecimentos adquiridos em desenvolvimento web, programação PHP e integração com banco de dados.
 
 ## ✨ Funcionalidades
 
-- 🔐 **Cadastro de usuários:** criação de contas para acessar o sistema.
-- 🔑 **Login:** acesso por meio de e-mail e senha.
+- 🔐 **Cadastro de usuários:** criação de contas utilizando e-mail e senha.
+- 🔑 **Login:** acesso ao sistema por meio de e-mail e senha.
 - 🎥 **Cadastro de filmes:** inclusão de filmes com nome, descrição e ano de lançamento.
-- 📋 **Listagem de filmes:** visualização dos filmes cadastrados.
-- ✏️ **Atualização de filmes:** alteração das informações dos filmes.
+- 📋 **Consulta de filmes:** visualização dos filmes cadastrados no sistema.
+- ✏️ **Atualização de filmes:** edição das informações dos filmes.
 - 🗑️ **Exclusão de filmes:** remoção de filmes cadastrados.
-- 💬 **Comentários:** publicação de comentários em filmes específicos.
-- 👤 **Identificação dos comentários:** exibição do nome do usuário que publicou o comentário.
+- 💬 **Comentários:** publicação de comentários sobre filmes específicos.
+- 👤 **Identificação dos comentários:** exibição do usuário responsável por cada comentário.
+- 🗑️ **Exclusão de comentários:** possibilidade de remover comentários cadastrados.
 
 ## 🛠️ Tecnologias utilizadas
 
-- **PHP:** desenvolvimento da lógica do sistema.
-- **HTML5:** estrutura das páginas.
-- **CSS3:** estilização e organização visual do site.
-- **PostgreSQL:** armazenamento dos dados.
-- **PDO:** conexão e comunicação entre o PHP e o banco de dados.
-- **Git e GitHub:** versionamento e armazenamento do código-fonte.
+- **PHP:** utilizado para desenvolver a lógica e as funcionalidades do sistema.
+- **HTML5:** utilizado para estruturar as páginas do site.
+- **CSS3:** utilizado para estilizar as páginas e organizar os elementos visuais.
+- **PostgreSQL:** utilizado para armazenar os dados dos usuários, filmes e comentários.
+- **PDO:** utilizado para conectar o PHP ao banco de dados.
+- **Git e GitHub:** utilizados para versionar e armazenar o código-fonte do projeto.
 
 ## 💻 Pré-requisitos
 
-Para executar o projeto localmente, é necessário ter:
+Para executar o projeto, é necessário ter:
 
 - PHP instalado.
 - PostgreSQL instalado e configurado.
+- Extensão PDO para PostgreSQL habilitada no PHP.
 - Um navegador web.
 - Visual Studio Code ou outro editor de código.
-- Extensão PDO para PostgreSQL habilitada no PHP.
 
-## 🚀 Como executar o projeto
+## 🚀 Como rodar o projeto
 
-1. Clone o repositório:
+### 1. Clonar o repositório
 
-   ```bash
-   git clone https://github.com/IsabellaZamai/ProjetoIntegradorFilmes.git
-   ```
+Abra o terminal e execute:
 
-2. Entre na pasta do projeto:
+```bash
+git clone https://github.com/IsabellaZamai/ProjetoIntegradorFilmes.git
+```
 
-   ```bash
-   cd ProjetoIntegradorFilmes
-   ```
+### 2. Entrar na pasta do projeto
 
-3. Configure o banco de dados PostgreSQL, criando o banco e as tabelas necessárias para armazenar os filmes, os usuários e os comentários.
+```bash
+cd ProjetoIntegradorFilmes
+```
 
-4. Configure as informações de conexão com o banco de dados no arquivo correspondente dentro da pasta `database`.
+### 3. Configurar o banco de dados
 
-5. Verifique se o PHP está instalado e se a extensão PDO para PostgreSQL está habilitada.
+Abra o PostgreSQL e crie o banco de dados utilizado pelo projeto.
 
-6. Inicie o servidor PHP na pasta do projeto:
+Configure as tabelas necessárias para armazenar os usuários, os filmes e os comentários.
 
-   ```bash
-   php -S localhost:8000
-   ```
+Depois, confira o arquivo de conexão localizado na pasta `database` e ajuste as informações de conexão conforme a configuração do seu banco de dados.
 
-7. Abra o navegador e acesse:
+### 4. Iniciar o servidor PHP
 
-   ```text
-   http://localhost:8000
-   ```
+No terminal, dentro da pasta do projeto, execute:
 
-**Observação:** os comandos acima pressupõem que o PHP esteja disponível no terminal. A configuração do banco de dados e os caminhos utilizados pelo projeto devem corresponder aos arquivos existentes no repositório.
+```bash
+php -S localhost:8000
+```
+
+### 5. Acessar o site
+
+Abra o navegador e acesse:
+
+http://localhost:8000
+
+**Observação:** caso o projeto utilize um subdiretório ou necessite de alguma configuração específica, o endereço de acesso deverá ser ajustado.
 
 ## 📁 Estrutura do projeto
 
 ```text
 ProjetoIntegradorFilmes/
 │
-├── app/          # Funcionalidades relacionadas aos filmes e comentários
-├── database/     # Conexão e configuração do banco de dados
-├── img/          # Imagens utilizadas no projeto
-├── includes/     # Arquivos compartilhados e funções
+├── app/          # Funcionalidades dos filmes e comentários
+├── database/     # Conexão com o banco de dados
+├── img/          # Imagens utilizadas no site
+├── includes/     # Funções e arquivos compartilhados
 ├── login/        # Cadastro, login e autenticação
-├── style/        # Arquivos CSS
+├── style/        # Arquivos de estilização CSS
 ├── index.php     # Página inicial
 └── README.md     # Documentação do projeto
 ```
 
-## 🎯 Objetivo acadêmico
+## 📚 Objetivo acadêmico
 
-Este projeto tem como objetivo colocar em prática os conhecimentos adquiridos durante os estudos de desenvolvimento web, especialmente na utilização de PHP, banco de dados relacional, operações CRUD e organização de arquivos.
+O projeto foi desenvolvido como parte de uma atividade acadêmica, com o objetivo de aplicar conhecimentos de programação, desenvolvimento web e banco de dados.
 
-## 👩‍💻 Autoria
+Durante o desenvolvimento, foram trabalhados conceitos como operações CRUD (criar, consultar, atualizar e excluir registros), organização de arquivos, autenticação de usuários e integração entre PHP e PostgreSQL.
 
-**Isabella Zamai**
 
-GitHub: [@IsabellaZamai](https://github.com/IsabellaZamai)
+
+
+
+
+
 
 ## 🔗 Repositório
 
-Acesse o projeto completo no GitHub:
+Acesse o projeto no GitHub:
 
 [Projeto Integrador de Filmes](https://github.com/IsabellaZamai/ProjetoIntegradorFilmes)
+
+
+
+
 

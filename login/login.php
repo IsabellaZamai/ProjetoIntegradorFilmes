@@ -51,7 +51,7 @@ require_once __DIR__ . '/../includes/functions.php';
 <br>
 
 <a href="cadastro.php">Criar uma conta</a><br>
-<a href="index.php">ir pro Inicio</a>
+
 
 <?php
 
@@ -66,7 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
         $_SESSION['id_usuario'] = $usuario['id_usuario'];
 
-        header("Location: /index.php");
+        header("Location: ../index.php");
         exit;
 
     } else {
