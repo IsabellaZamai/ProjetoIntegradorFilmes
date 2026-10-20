@@ -51,7 +51,7 @@ require_once __DIR__ . '/../includes/functions.php';
 <br>
 
 <a href="cadastro.php">Criar uma conta</a><br>
-<link rel="stylesheet" href="/ProjetoIntegrador/style/style.css">
+<link rel="stylesheet" href="/ProjetoIntegradorFilmes/style/style.css">
 
 <?php
 
