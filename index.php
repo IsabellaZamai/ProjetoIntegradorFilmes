@@ -10,7 +10,7 @@ require_once __DIR__ . '/includes/functions.php';
 <head>
     <meta charset="UTF-8">
     <title>Site de Filmes</title>
-    <<link rel="stylesheet" href="/ProjetoIntegradorFilmes/style/style.css">
+    <link rel="stylesheet" href="/ProjetoIntegradorFilmes/style/style.css">
 </head>
 
 <body>
