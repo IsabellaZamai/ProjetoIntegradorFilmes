@@ -1,159 +1,281 @@
-# 🎬 READ ME - Site de Filmes
+# 🎬 Site de Filmes — Projeto Integrador
 
-## 📌 Sobre o projeto
+Sistema web para cadastro, consulta e gerenciamento de filmes, desenvolvido em PHP, HTML, CSS e PostgreSQL como parte do Projeto Integrador.
 
-O **Site de Filmes** é um projeto desenvolvido para permitir que os usuários cadastrem, consultem, atualizem e excluam filmes, além de compartilhar suas opiniões por meio de comentários.
+O sistema permite que os usuários criem uma conta, façam login, consultem filmes cadastrados e publiquem comentários sobre as obras. Também possui funcionalidades para cadastrar, atualizar e excluir filmes.
 
-O site apresenta informações como nome, descrição e ano de lançamento dos filmes, permitindo que os usuários encontrem os filmes cadastrados e visualizem os comentários relacionados a cada um deles.
+## 📑 Sumário
 
-## 🎯 Objetivo
+1. Sobre o projeto
+2. Tecnologias utilizadas
+3. Requisitos funcionais
+4. Regras de negócio
+5. Requisitos não funcionais
+6. Fluxo de funcionamento
+7. Banco de dados
+8. Organização do código
+9. Como executar o projeto
+10. Projeto Integrador
 
-O objetivo do Site de Filmes é oferecer um espaço onde os usuários possam organizar filmes e compartilhar suas opiniões sobre eles. O projeto também busca colocar em prática os conhecimentos adquiridos em desenvolvimento web, programação PHP e integração com banco de dados.
+## 1. Sobre o projeto
 
-## ✨ Funcionalidades
+O Site de Filmes foi desenvolvido com a proposta de reunir informações sobre filmes em uma única aplicação, permitindo que os usuários consultem títulos e compartilhem suas opiniões por meio de comentários.
 
-- 🔐 **Cadastro de usuários:** criação de contas utilizando e-mail e senha.
-- 🔑 **Login:** acesso ao sistema por meio de e-mail e senha.
-- 🎥 **Cadastro de filmes:** inclusão de filmes com nome, descrição e ano de lançamento.
-- 📋 **Consulta de filmes:** visualização dos filmes cadastrados no sistema.
-- ✏️ **Atualização de filmes:** edição das informações dos filmes.
-- 🗑️ **Exclusão de filmes:** remoção de filmes cadastrados.
-- 💬 **Comentários:** publicação de comentários sobre filmes específicos.
-- 👤 **Identificação dos comentários:** exibição do usuário responsável por cada comentário.
-- 🗑️ **Exclusão de comentários:** possibilidade de remover comentários cadastrados.
+A aplicação utiliza páginas web para a interação com o usuário e um banco de dados para armazenar as informações cadastradas.
 
-## 🛠️ Tecnologias utilizadas
+### Principais funcionalidades
 
-- **PHP:** utilizado para desenvolver a lógica e as funcionalidades do sistema.
-- **HTML5:** utilizado para estruturar as páginas do site.
-- **CSS3:** utilizado para estilizar as páginas e organizar os elementos visuais.
-- **PostgreSQL:** utilizado para armazenar os dados dos usuários, filmes e comentários.
-- **PDO:** utilizado para conectar o PHP ao banco de dados.
-- **Git e GitHub:** utilizados para versionar e armazenar o código-fonte do projeto.
+- Cadastro de usuários.
+- Login e encerramento de sessão.
+- Cadastro de filmes.
+- Consulta dos filmes disponíveis no sistema.
+- Atualização das informações dos filmes.
+- Exclusão de filmes cadastrados.
+- Registro e visualização de comentários.
+- Armazenamento dos dados no PostgreSQL.
 
-## 💻 Pré-requisitos
+## 2. Tecnologias utilizadas
 
-Para executar o projeto, é necessário ter:
+| Tecnologia | Utilização |
+|---|---|
+| HTML5 | Estrutura das páginas e formulários. |
+| CSS3 | Estilização e organização visual do site. |
+| PHP | Processamento das informações e funcionalidades do sistema. |
+| PostgreSQL | Armazenamento dos filmes, usuários e comentários. |
+| PDO | Conexão entre o PHP e o banco de dados. |
+| Git e GitHub | Controle de versões e compartilhamento do código. |
+
+## 3. Requisitos funcionais
+
+Os requisitos funcionais descrevem as ações que o sistema deve permitir realizar.
+
+| Código | Requisito |
+|---|---|
+| RF01 | Permitir o cadastro de usuários. |
+| RF02 | Permitir o acesso ao sistema por meio de login. |
+| RF03 | Criar uma sessão após a autenticação do usuário. |
+| RF04 | Exibir os filmes cadastrados. |
+| RF05 | Permitir o cadastro de novos filmes. |
+| RF06 | Permitir a consulta das informações de um filme. |
+| RF07 | Permitir a atualização dos dados dos filmes. |
+| RF08 | Permitir a exclusão de filmes. |
+| RF09 | Permitir a inclusão de comentários relacionados aos filmes. |
+| RF10 | Exibir os comentários associados a cada filme. |
+| RF11 | Identificar o usuário relacionado ao comentário. |
+| RF12 | Permitir que o usuário encerre sua sessão. |
+
+## 4. Regras de negócio
+
+As regras de negócio estabelecem condições para o funcionamento correto da aplicação.
+
+| Código | Regra |
+|---|---|
+| RN01 | O cadastro de usuário deve receber os dados necessários para criar uma conta. |
+| RN02 | O login deve verificar as credenciais informadas. |
+| RN03 | As páginas restritas devem verificar se o usuário está autenticado. |
+| RN04 | Os filmes cadastrados devem ser armazenados no banco de dados. |
+| RN05 | A atualização de um filme deve alterar as informações correspondentes ao registro selecionado. |
+| RN06 | A exclusão deve remover o filme selecionado do sistema. |
+| RN07 | Os comentários devem estar relacionados a um filme. |
+| RN08 | Os comentários devem permitir identificar o usuário que os publicou. |
+| RN09 | Os dados devem ser consultados e manipulados por meio da conexão com o banco de dados. |
+| RN10 | Ao encerrar a sessão, o usuário deve sair da área autenticada. |
+
+## 5. Requisitos não funcionais
+
+Os requisitos não funcionais descrevem características esperadas para o sistema.
+
+| Código | Categoria | Requisito |
+|---|---|---|
+| RNF01 | Usabilidade | As páginas devem apresentar uma organização simples e intuitiva. |
+| RNF02 | Compatibilidade | O sistema deve funcionar em um navegador compatível com as tecnologias utilizadas. |
+| RNF03 | Persistência | Os dados devem ser armazenados no PostgreSQL. |
+| RNF04 | Manutenção | O código deve estar separado em arquivos e diretórios conforme suas funções. |
+| RNF05 | Segurança | As páginas restritas devem verificar a autenticação do usuário. |
+| RNF06 | Integridade | As operações devem manter o relacionamento entre filmes, usuários e comentários. |
+| RNF07 | Confiabilidade | O sistema deve tratar erros durante as operações realizadas. |
+
+## 6. Fluxo de funcionamento
+
+### 6.1. Fluxo do usuário
+
+```text
+       Página inicial
+             |
+             v
+    Cadastro ou login
+             |
+             v
+    Validar informações
+             |
+             v
+    Acessar o sistema
+             |
+             v
+      Consultar filmes
+             |
+             v
+   Selecionar um filme
+             |
+             v
+   Visualizar informações
+             |
+             v
+   Consultar comentários
+             |
+             v
+  Adicionar um comentário
+             |
+             v
+       Sair da conta
+```
+
+### 6.2. Fluxo de gerenciamento de filmes
+
+```text
+       Acessar o sistema
+              |
+              v
+     Escolher uma operação
+              |
+     +--------+--------+
+     |        |        |
+     v        v        v
+ Cadastrar  Consultar  Atualizar
+     |        |        |
+     +--------+--------+
+              |
+              v
+       Excluir filme
+              |
+              v
+       Banco de dados
+```
+
+## 7. Banco de dados
+
+O sistema utiliza o PostgreSQL para armazenar e organizar as informações necessárias para o funcionamento da aplicação.
+
+### Tabelas principais
+
+| Tabela | Finalidade |
+|---|---|
+| `usuarios` | Armazena os dados dos usuários cadastrados. |
+| `filmes` | Armazena os dados dos filmes, como nome, descrição e ano de lançamento. |
+| `comentarios` | Armazena os comentários relacionados aos filmes e aos usuários. |
+
+### Relacionamento entre as tabelas
+
+A tabela `comentarios` relaciona os usuários aos filmes, permitindo identificar quem publicou cada comentário e a qual filme ele pertence.
+
+O PHP utiliza PDO para executar consultas e operações no banco de dados PostgreSQL.
+
+## 8. Organização do código
+
+O projeto está dividido em diretórios que facilitam a localização dos arquivos e a manutenção do sistema.
+
+```text
+ProjetoIntegradorFilmes/
+│
+├── index.php
+│
+├── app/
+│   ├── select.php
+│   ├── create.php
+│   ├── update.php
+│   ├── delete.php
+│   └── comentario.php
+│
+├── database/
+│   └── connect.php
+│
+├── includes/
+│   ├── functions.php
+│   └── header.php
+│
+├── login/
+│   ├── login.php
+│   ├── cadastro.php
+│   ├── logout.php
+│   └── verifica_user.php
+│
+└── style/
+    └── style.css
+```
+
+*Observação: confira os nomes dos arquivos e diretórios antes de utilizar esta estrutura no README definitivo.*
+
+### Função dos diretórios
+
+- `index.php`: página inicial do site.
+- `app/`: páginas de cadastro, consulta, atualização, exclusão de filmes e comentários.
+- `database/`: configuração da conexão com o banco de dados.
+- `includes/`: arquivos compartilhados e funções utilizadas no sistema.
+- `login/`: páginas de cadastro, login, logout e verificação de acesso.
+- `style/`: arquivos responsáveis pela estilização das páginas.
+
+## 9. Como executar o projeto
+
+### Pré-requisitos
+
+Para executar a aplicação, é necessário ter:
 
 - PHP instalado.
 - PostgreSQL instalado e configurado.
-- Extensão PDO para PostgreSQL habilitada no PHP.
-- Um navegador web.
+- Extensão `pdo_pgsql` habilitada no PHP.
 - Visual Studio Code ou outro editor de código.
+- Navegador atualizado.
 
-## 🚀 Como rodar o projeto
+### Passo 1 — Baixar o projeto
 
-### 1. Clonar o repositório
-
-Abra o terminal e execute:
+Clone o repositório do GitHub:
 
 ```bash
 git clone https://github.com/IsabellaZamai/ProjetoIntegradorFilmes.git
 ```
 
-### 2. Entrar na pasta do projeto
+Entre na pasta do projeto:
 
 ```bash
 cd ProjetoIntegradorFilmes
 ```
 
-### 3. Configurar o banco de dados
+### Passo 2 — Configurar o banco de dados
 
-Abra o PostgreSQL e crie o banco de dados utilizado pelo projeto.
+Crie o banco de dados `filmes` no PostgreSQL e configure as tabelas necessárias para os usuários, filmes e comentários.
 
-Configure as tabelas necessárias para armazenar os usuários, os filmes e os comentários.
+Verifique as informações de conexão no arquivo:
 
-Depois, confira o arquivo de conexão localizado na pasta `database` e ajuste as informações de conexão conforme a configuração do seu banco de dados.
+```text
+database/connect.php
+```
 
-### 4. Iniciar o servidor PHP
+O endereço do servidor, a porta, o nome do banco, o usuário e a senha devem corresponder à configuração do PostgreSQL instalado.
 
-No terminal, dentro da pasta do projeto, execute:
+### Passo 3 — Iniciar o servidor PHP
+
+No terminal do Visual Studio Code, dentro da pasta do projeto, execute:
 
 ```bash
 php -S localhost:8000
 ```
 
-### 5. Acessar o site
+### Passo 4 — Acessar o site
 
 Abra o navegador e acesse:
 
 http://localhost:8000
 
-**Observação:** caso o projeto utilize um subdiretório ou necessite de alguma configuração específica, o endereço de acesso deverá ser ajustado.
+A página inicial será exibida se o servidor estiver executando corretamente e os arquivos estiverem configurados.
 
-## 💾 Backup do banco de dados (Dump)
+## 10. Projeto Integrador
 
-O dump é utilizado para gerar uma cópia do banco de dados, armazenando as informações cadastradas no sistema. Esse arquivo pode ser utilizado para restaurar os dados em outro ambiente ou recuperar informações quando necessário.
+O Site de Filmes foi desenvolvido para colocar em prática os conhecimentos de desenvolvimento web, programação em PHP, estruturação de páginas com HTML e CSS e manipulação de dados com PostgreSQL.
 
-### Gerar o dump
+O projeto também trabalha com operações CRUD — Create, Read, Update e Delete —, autenticação de usuários, controle de sessão e relacionamento entre tabelas.
 
-No terminal do servidor, utilizando o PostgreSQL, execute:
+O desenvolvimento contribui para a compreensão das etapas de criação de uma aplicação web, desde a organização dos arquivos até a implementação das funcionalidades e o armazenamento das informações.
 
-```bash
-pg_dump -U postgres -d filmes -f filmes.sql
-```
+## 🔗 Repositório do projeto
 
-Nesse comando:
-
-- `-U filmes`: informa o usuário do PostgreSQL.
-- `-d filmes`: indica o banco de dados que será exportado.
-- `-f filmes.sql`: define o nome do arquivo que será gerado.
-
-Após executar o comando, informe a senha do banco de dados, caso seja solicitada. O arquivo `filmes.sql` será criado no diretório atual.
-
-### Restaurar o dump
-
-Para restaurar o backup em um banco de dados já criado, execute:
-
-```bash
-psql -U filmes -d filmes -f filmes.sql
-```
-
-**Observação:** o usuário e o nome do banco devem ser ajustados conforme a configuração do ambiente. O arquivo de dump deve ser guardado em um local seguro para evitar a perda dos dados do projeto.
-
-
-
-
-
-
-## 📁 Estrutura do projeto
-
-```text
-ProjetoIntegradorFilmes/
-│
-├── app/          # Funcionalidades dos filmes e comentários
-├── database/     # Conexão com o banco de dados
-├── img/          # Imagens utilizadas no site
-├── includes/     # Funções e arquivos compartilhados
-├── login/        # Cadastro, login e autenticação
-├── style/        # Arquivos de estilização CSS
-├── index.php     # Página inicial
-└── README.md     # Documentação do projeto
-```
-
-## 📚 Objetivo acadêmico
-
-O projeto foi desenvolvido como parte de uma atividade acadêmica, com o objetivo de aplicar conhecimentos de programação, desenvolvimento web e banco de dados.
-
-Durante o desenvolvimento, foram trabalhados conceitos como operações CRUD (criar, consultar, atualizar e excluir registros), organização de arquivos, autenticação de usuários e integração entre PHP e PostgreSQL.
-
-
-
-
-
-
-
-
-## 🔗 Repositório
-
-Acesse o projeto no GitHub:
-
-[Projeto Integrador de Filmes](https://github.com/IsabellaZamai/ProjetoIntegradorFilmes)
-
-
-
-
-
-Create user filme whit password create database owner films;
--U -d -f
-nano connect.php
+[ProjetoIntegradorFilmes — GitHub](https://github.com/IsabellaZamai/ProjetoIntegradorFilmes.git)
