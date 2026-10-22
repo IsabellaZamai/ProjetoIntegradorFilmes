@@ -1,5 +1,9 @@
 <header>
+     <img src="/ProjetoIntegradorFilmes/img/filme.webp"
+     alt="imagem de um rolo de filme antigo"
+     width="90" height=auto>
     <h1>Que Filmaço!</h1>
+ 
 
     <p>Para Navegar escolha uma opção no menu!</p>
     <br><br>
