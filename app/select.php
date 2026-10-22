@@ -50,11 +50,12 @@ foreach ($filmes as $filme) {
 
     echo "<br>";
 
-    echo "<a href='/app/filme.php?id=" . $filme['id_filme'] . "'>";
+    echo "<a href='/ProjetoIntegradorFilmes/app/filme.php?id=" . $filme['id_filme'] . "'>";
     echo "Ver comentários";
     echo "</a>";
 
 }
+
 
 ?>
 

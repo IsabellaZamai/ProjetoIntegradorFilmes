@@ -90,7 +90,7 @@ function cadastrar_user($conexao, $email, $senha)
     $stmt->bindParam(":senha", $senha);
 
     if ($stmt->execute()) {
-        header("Location: /ProjetoIntegradorFilmes/login/login.php");
+        header("Location: /../login/login.php");
         exit;
     } else {
         echo "Erro no Cadastro!";
