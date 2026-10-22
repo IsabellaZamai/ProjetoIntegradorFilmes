@@ -1,6 +1,8 @@
 <header>
-    <h1>Site de Filmes</h1>
+    <h1>Que Filmaço!</h1>
 
+    <p>Para Navegar escolha uma opção no menu!</p>
+    <br><br>
     <nav>
         <a href="/ProjetoIntegradorFilmes/index.php">Início</a>
         <a href="/ProjetoIntegradorFilmes/app/select.php">Filmes</a>

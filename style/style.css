@@ -1,97 +1,100 @@
 
-/* CONFIGURAÇÃO GERAL */
+
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    margin: 0;
+    background-color: #100d16;
+    color: white;
     font-family: Arial, sans-serif;
-    background-color: #eeeaf5;
-    color: #292333;
     text-align: center;
 }
 
-/* CABEÇALHO */
+
 header {
-    background-color: #7024df;
-    color: white;
-    text-align: center;
-    padding: 25px 15px;
+    background-color: #1b1426;
+    padding: 25px;
+    border-bottom: 3px solid #8b36e9;
 }
 
 header h1 {
-    margin: 0 0 20px;
+    color: #a855f7;
     font-size: 36px;
+    margin-bottom: 20px;
 }
 
-/* MENU */
+
 nav {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 25px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    padding: 10px 14px;
-    border-radius: 8px;
+    font-size: 16px;
     transition: 0.3s;
 }
 
 nav a:hover {
-    background-color: #5316b5;
+    color: #c084fc;
 }
 
-/* CONTEÚDO PRINCIPAL */
-main {
-    width: 90%;
-    max-width: 1000px;
-    margin: 35px auto;
+/* Títulos */
+h1, h2, h3 {
     text-align: center;
+    margin-bottom: 20px;
 }
 
-/* TÍTULOS */
 h2 {
-    color: #7024df;
-    text-align: center;
-    margin-bottom: 25px;
+    color: #b56aff;
+    margin-top: 30px;
 }
 
-/* FORMULÁRIOS */
+/* Conteúdo principal */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px;
+}
+
+/* Formulários */
 form {
-    background-color: white;
-    width: 90%;
-    max-width: 600px;
-    margin: 25px auto;
-    padding: 25px;
+    background-color: #1b1426;
+    border: 1px solid #7030a0;
     border-radius: 12px;
-    box-shadow: 0 3px 12px #00000012;
-    text-align: center;
+    padding: 25px;
+    width: 90%;
+    max-width: 450px;
+    margin: 25px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
 }
 
 label {
-    display: block;
-    margin-top: 15px;
-    margin-bottom: 7px;
-    font-weight: bold;
-    text-align: center;
+    color: #e9d5ff;
+    width: 100%;
+    text-align: left;
 }
 
-input,
-textarea,
-select {
-    display: block;
+input, textarea, select {
     width: 100%;
     padding: 12px;
-    border: 1px solid #d5c9e8;
-    border-radius: 7px;
+    border: 1px solid #7030a0;
+    border-radius: 6px;
+    background-color: #100d16;
+    color: white;
     font-size: 15px;
-    font-family: Arial, sans-serif;
-    text-align: center;
 }
 
 textarea {
@@ -99,115 +102,60 @@ textarea {
     min-height: 100px;
 }
 
-input:focus,
-textarea:focus,
-select:focus {
-    outline: 2px solid #b99aef;
-    border-color: #7024df;
-}
-
-/* BOTÕES */
-button,
-input[type="submit"] {
-    display: block;
-    background-color: #7024df;
+/* Botões */
+button, input[type="submit"] {
+    background-color: #822ce5;
     color: white;
     border: none;
-    border-radius: 8px;
-    padding: 12px 20px;
-    margin: 18px auto;
+    border-radius: 7px;
+    padding: 12px 25px;
     cursor: pointer;
-    font-size: 15px;
-    width: auto;
+    font-size: 16px;
+    transition: 0.3s;
 }
 
-button:hover,
-input[type="submit"]:hover {
-    background-color: #5316b5;
+button:hover, input[type="submit"]:hover {
+    background-color: #a855f7;
 }
 
-/* LINKS */
+/* Links do conteúdo */
 a {
-    color: #7024df;
+    color: #c084fc;
 }
 
-/* MANTER LINKS DO MENU BRANCOS */
-nav a {
+a:hover {
     color: white;
 }
 
-/* LISTA DE FILMES E COMENTÁRIOS */
-.filme,
-.comentario,
-.card {
-    background-color: white;
-    width: 90%;
-    max-width: 800px;
+/* Lista de filmes e comentários */
+.filme, .comentario, .card {
+    background-color: #1b1426;
+    border: 1px solid #7030a0;
+    border-radius: 12px;
     padding: 20px;
     margin: 20px auto;
-    border-radius: 12px;
-    box-shadow: 0 3px 12px #00000010;
+    width: 90%;
+    max-width: 650px;
     text-align: center;
 }
 
-.filme h3,
-.card h3 {
-    color: #7024df;
-    text-align: center;
+.filme h2, .card h2 {
+    margin-top: 0;
 }
 
-/* TABELAS */
+/* Imagens */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 15px auto;
+}
+
+/* Tabelas */
 table {
-    width: 100%;
-    max-width: 900px;
+    margin: 25px auto;
     border-collapse: collapse;
-    background-color: white;
-    margin: 20px auto;
-    text-align: center;
-}
-
-th {
-    background-color: #7024df;
-    color: white;
-}
-
-th,
-td {
-    padding: 12px;
-    text-align: center;
-    border-bottom: 1px solid #e5deef;
-}
-
-/* RODAPÉ */
-footer {
-    background-color: #7024df;
-    color: white;
-    text-align: center;
-    padding: 18px;
-    margin-top: 40px;
-}
-
-/* CELULAR */
-@media (max-width: 600px) {
-    header h1 {
-        font-size: 28px;
-    }
-
-    nav {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    main {
-        width: 94%;
-    }
-
-    form {
-        width: 100%;
-        padding: 18px;
-    }
-
-    table {
-        font-size: 13px;
-    }
+    width: 90%;
+    max-width: 900px;
 }
